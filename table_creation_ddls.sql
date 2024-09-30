@@ -4,7 +4,6 @@ CREATE TABLE Theatres (
     location VARCHAR(255) NOT NULL
 );
 
-
 CREATE TABLE Movies (
     movie_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
@@ -12,7 +11,6 @@ CREATE TABLE Movies (
     rating CHAR(2),
     format VARCHAR(10)
 );
-
 
 CREATE TABLE Shows (
     show_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -24,7 +22,6 @@ CREATE TABLE Shows (
     FOREIGN KEY (theatre_id) REFERENCES Theatres(theatre_id),
     FOREIGN KEY (movie_id) REFERENCES Movies(movie_id)
 );
-
 
 CREATE TABLE Customers (
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
